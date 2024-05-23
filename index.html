@@ -1,0 +1,73 @@
+<!--Certification Project - Survey Form-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <!--Survey Title-->
+    <h1 id="title">Pet Survey</h1>
+    <!--Survey Description-->
+    <p id="description">Hello! This is a survey about pets.</p>
+    <!--Survey Form-->
+    <form id="survey-form" method="post">
+        <!--Fieldset #1, Name and Email-->
+        <fieldset>
+            <label for="name" id="name-label">Enter Your Name: <input id="name" name="name" type="text"
+                    placeholder="Enter First and Last Name" required /></label>
+            <label for="email" id="email-label">Enter Your Email:<input id="email" name="email" type="email"
+                    placeholder="Enter a valid email address" required /></label>
+        </fieldset>
+        <!--Fieldset #2, Number-->
+        <fieldset>
+            <label for="number" id="number-label">How many pets do you own?<input id="number" name="number"
+                    type="number" pattern="[0-9]" placeholder="Enter a Number between 0 to 100" min="0" max="100"
+                    required /></label>
+        </fieldset>
+        <!--Fieldset #3, Dropdown-->
+        <fieldset>
+            <label for="dropdown">Are you a cat person or a dog person?
+                <select id="dropdown" name="dropdown">
+                    <option value="">(select one)</option>
+                    <option value="1">Cat</option>
+                    <option value="2">Dog</option>
+                    <option value="3">Neither</option>
+                    <option value="4">I apprechiate all life from my smartphone</option>
+                </select>
+            </label>
+        </fieldset>
+        <!--Fieldset #4, Select Radio Buttons-->
+        <fieldset>
+            <legend>Which do you prefer pets inside or outside? (required)</legend>
+            <label for="inside"><input id="inside" type="radio" name="inside-outside" class="inline" value="inside"
+                    checked /> Inside</label>
+            <label for="outside"><input id="outside" type="radio" name="inside-outside" class="inline"
+                    value="outside" /> Outside</label>
+            <label for="go"><input id="go" type="radio" name="inside-outside" class="inline" value="go" /> Where I go
+                they go</label>
+        </fieldset>
+        <!--Fieldset #5, Checked Boxes-->
+        <fieldset>
+            <legend>Are you a pet parent?</legend>
+            <input id="yes" type="checkbox" name="parent" value="yes" checked><label id="checkbox" for="yes">Yes</label>
+            <input id="no" type="checkbox" name="parent" value="no"><label id="checkbox" for="no">No</label>
+            <input id="godparent" type="checkbox" name="parent" value="godparent"><label id="checkbox"
+                for="godparent">I'm the godparent</label>
+        </fieldset>
+        <!--Fieldset #6, Text Area-->
+        <fieldset>
+            <label for="share">Sharing is caring:
+                <textarea id="share" name="share" rows="3" cols="30"
+                    placeholder="Here is some space for you to share (i.e. a story about your pet, this survey, etc.) ..."></textarea>
+            </label>
+        </fieldset>
+        <!--Submit button-->
+        <input id="submit" type="submit" value="Submit" />
+    </form>
+</body>
+
+</html>
